@@ -7,21 +7,24 @@
 
 # Base class
 class Animal:
+    def __init__(self, sound):
+        self.sound = sound
+    
     def make_sound(self):
-        print("Some generic animal sound")
+        print(self.sound)
 
 # Subclasses
 class Dog(Animal):
-    def make_sound(self):
-        print("Bark")
+    def __init__(self):
+        super().__init__("Bark")
 
 class Cat(Animal):
-    def make_sound(self):
-        print("Meow")
+    def __init__(self):
+        super().__init__("Meow")
 
 class Bird(Animal):
-    def make_sound(self):
-        print("Chirp")
+    def __init__(self):
+        super().__init__("Chip")
 
 # Instantiate and call methods
 dog = Dog()
